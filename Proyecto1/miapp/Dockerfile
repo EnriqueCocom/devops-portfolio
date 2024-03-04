@@ -1,13 +1,7 @@
-FROM node:18.19.1-alpine
+FROM node:18.19.1-alpine as build-stage
 
 WORKDIR /app
 
-COPY package*.json ./
-
-RUN npm install
-
 COPY . .
 
-EXPOSE 5173
-
-CMD ["npm", "run","serve"]
+RUN npm install 
