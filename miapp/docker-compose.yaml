@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  web:
+    build: .
+    container_name: web_vue
+    ports:
+      - 8081:80
